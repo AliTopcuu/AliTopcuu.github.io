@@ -1,0 +1,224 @@
+
+* { /*Tarayıcının var sayılan kısımlarını koda göre düzenle */
+    margin: 0; /* Tüm elemanların varsayılan kenar boşluklarını sıfırlama */
+    padding: 0; 
+    box-sizing: border-box; /* Elemanların genişlik ve yükseklik hesaplamalarına kenarlık ve dolgu dahil etme */
+    font-size: 30px; 
+}
+body {
+    background-color: #F2F2F2; 
+    color: #e4e4e4; 
+}
+.container {
+    display: grid; /* Sayfa düzenini grid olarak belirleme */
+    grid-template-areas:
+        "header"
+        "aside"
+        "main"
+        "footer"; /* Dört ana bölümü tanımlama */
+    grid-template-rows: auto 1fr auto; /* Satır yüksekliğini tanımlar */
+    height: 100vh;
+}
+header {
+    background-image: url('images/yıldız.jpg'); 
+    grid-area: header; /* Header bölgesine yerleştirir */
+    background-color: #000; 
+    color: #F2F2F2; 
+    padding: 20px; /* İç boşluk ekler */
+    text-align: center;
+}
+header img {
+    width: 100%; 
+    max-width: 150px;
+    height: auto; 
+}
+header h1 {
+    font-size: 2rem; 
+    margin: 10px 0; /* Kenar boşluklarını ayarlar */
+}
+header p {
+    font-size: 1rem;
+}
+aside {
+    grid-area: aside; 
+    background-color: transparent; 
+    color: #F2F2F2; 
+    padding: 20px; 
+    display: flex; /* Esnek düzen kullanır */
+    flex-direction: column; /* Elemanları dikey olarak hizalar */
+    background-image: url('images/yıldız.jpg'); 
+}
+aside img {
+    width: 100%; 
+    height: auto; 
+    padding-bottom: 15px; /* Alt iç boşluk ekler */
+    border-radius: 15px; 
+}
+aside nav ul {
+    padding: 0; 
+}
+aside nav ul li { /* li buradaki sıralama için gereklidir */
+    margin-bottom: 15px; 
+}
+aside nav ul li a { /* li içerisinde bulunan a içersinde yazılanları etkiler */
+    color: #F2F2F2; 
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+    font-size: 1.1rem; 
+    padding: 10px; 
+    background-color: #7a5050; 
+    border-radius: 5px; 
+    transition: background-color 0.3s;
+    display: block; /* Bloğu tam genişlik kaplar */
+}
+aside nav ul li a:hover {
+    background-color: #F27F1B; 
+}
+.social-links {
+    display: flex; 
+    justify-content: center; /* Ortaya hizalar */
+    gap: 15px; /* Aralarına boşluk ekler */
+    margin-top: auto; 
+}
+.social-links img {
+    width: 40px; 
+    height: auto; 
+}
+main {
+    background-image: url('images/yıldız2.jpg'); 
+    background-size: cover; /* Resmi sayfa boyutuna göre ayarlar */
+    background-position: center; 
+    background-repeat: no-repeat; /* Tekrar etmesini engeller */
+    background-attachment: fixed; /* Kaydırma yapıldığında arka plan sabit kalır */
+    margin: 0; 
+    padding: 0; }
+main h2 {
+    font-size: 1.8rem; 
+    margin-bottom: 10px; 
+}
+main p {
+    font-size: 1rem; 
+}
+form {
+    background-image: url('images/karlıdag2.jpg'); 
+    max-width: 900px; 
+    margin: 20px 0; 
+    background-size: cover; /* Resmi boyuta göre kaplar resmi forma uygun hale getir*/
+    color: #000000;
+}
+label {
+    display: block; /* Her etiketi bir blok olarak yerleştirir */
+    margin: 10px 0 5px; 
+    font-weight: bold; 
+}
+input,
+textarea {
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+    border-radius: 5px; 
+    box-sizing: border-box; /* Kenarlık boyutunu dahil eder */
+    background-color: transparent;
+    font-size: 1em;
+}
+input {
+    background-color: transparent;
+    color: #fff; 
+    padding: 10px 15px; /* İç boşluk ekler */
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; /* Buton üzerine gelindiğinde imleci değiştirir */
+    font-size: 1em; 
+}
+#error-message {
+    color: #f00; 
+    font-weight: bold;
+    display: none; /* Varsayılan olarak gizler */
+    margin-top: -10px; 
+    margin-bottom: 10px; 
+}
+.filter-menu {
+    margin-bottom: 20px; 
+}
+.filter-menu select {
+    font-size: 1rem; 
+    border-radius: 5px; 
+    border: 1px solid #ccc; 
+}
+.filter-menu button:hover {
+    background-color: #000000;
+    color: #ccc; 
+}
+footer {
+    grid-area: footer; 
+    background-color: #012340;
+    color: #F2F2F2; 
+    text-align: center; 
+    padding: 10px; 
+    font-size: 0.9rem; 
+    margin-top: auto; 
+}
+/* Responsive  */
+@media (min-width: 768px) {
+    .container {
+        grid-template-areas:
+            "header header"
+            "aside main"
+            "footer footer"; 
+        grid-template-columns: 250px 1fr; /* Sütun genişliklerini belirlediğim kod */
+    }
+}
+.modal {
+    display: none; /* Varsayılan olarak modalı gizler */
+    position: fixed; /* Sabit pozisyon verir */
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; /* Kaydırılabilir yapar */
+    background-color: rgba(0, 0, 0, 0.8); 
+}
+.modal-content {
+    margin: auto; 
+    display: block; 
+    width: 80%; 
+    max-width: 700px;
+    height: 70vh; 
+    object-fit: contain; 
+    border-radius: 50%; /* Köşeleri yuvarlat */
+}
+.project {
+    width: 450px; 
+}
+#contactForm {
+    padding: 20px; 
+    border: 7px solid transparent; 
+    border-radius: 5px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    margin: 20px; 
+}
+.homepage-baslık {
+    font-size: 2.5rem; 
+    color: #290d0dbf; 
+    text-align: center; 
+    font-weight: bold; 
+    text-transform: uppercase; /* Tamamen büyük harf yapar */
+    letter-spacing: 2px; /* Harf aralığı belirler */
+    margin-bottom: 20px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+    border-bottom: 3px solid #F59E0B; 
+    padding-bottom: 10px; 
+}
+#showMoreBtn {
+    background-color: #4CAF50;
+    color: white; 
+    padding: 10px 20px; 
+    border: none; /* Kenarlığı kaldırır */
+    border-radius: 5px; 
+    cursor: pointer; /* İmleç işaretini üstünde farklı gösterir */
+    font-size: 1rem; 
+    margin-top: 15px; 
+}
+#showMoreBtn:hover {
+    background-color: #45a049; 
+}

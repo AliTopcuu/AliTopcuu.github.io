@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>AUT - Hakkımda</title>
+    <link rel="stylesheet" href="web.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="gif-container">
+                <img src="images/i-VEED.gif" alt="Örnek GIF" class="gif-image">
+            </div>
+        </header>
+        <aside>
+            <img src="images/me.png" alt="Ben" class="aside-image">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Anasayfa</a></li>
+                    <li><a href="hakkımda.html">Hakkımda</a></li>
+                    <li><a href="projeler.html">Projeler</a></li>
+                </ul>
+            </nav>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/mojit0_0/profilecard/?igsh=NWZiODJob3F0bWVw" class="instagram-link" target="_blank">
+                        <img src="images/instalogo.png" alt="Instagram Logo" class="instagram-logo">
+                    </a>
+                    <a href="https://www.yemeksepeti.com/restaurant/g3da/cool-chickens" target="_blank"class="sponsor-link">
+                        <img src="images/sponsor.png" alt="Sponsor Logo" class="sponsor-logo">
+                    </a>
+                </div>
+            
+        </aside>
+
+        <main style="background-image: url('images/hakkındaarka.jpg');">
+            <h1 class="homepage-baslık" style="font-size: 60px;">Hakkımda</h1>
+            <p style="font-size: 40px;">Merhaba ben  Ali Ufuktan Topcu, şu anda Recep Tayyip Erdoğan Üniversitesinde bilgisayar mühendisliği 3.sınıf öğrencisiyim.</p>
+            
+            <!-- Kısa içerik -->
+            <p id="shortContent">
+                Benim hakkımda  daha fazla bilgiye aşağıdaki buton ile ulaşabilirsiniz.
+            </p>
+            <p>-</p>
+        
+            <!-- Daha fazla içerik -->
+            <div id="fullContent" style="display: none; ">
+                <p style="font-size: 35px;">Hobilerim arasında basketbol oynamak ve yüzmek vardır.Web alanında ilerlemeyi ve bu alamda gelişmeyi planlıyorum.Hedeflerim arasında ünlü bir e-commerce sitesinde iyi bir pozisyonunda çalışmak istiyorum.Tasarım kısmında kendimi geliştirmek istiyorum, javascript için gerekli kursları alıyorum.CSS  ilgimi çekiyor , web sayfamdaki değişiklikleri gözlemlemek hoşuma gidiyor , deneyerek ilerlemenin beni daha hızlı geliştireceğini düşünüyorum ve tabiki de bunu severek yapacağımdan hiç şüphem yok.</p>
+                
+            </div>
+        
+            <!-- Daha Fazla Göster butonu -->
+            <button id="showMoreBtn" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 1rem;" onclick="showMore()">
+                Daha Fazla Göster
+            </button>
+            
+        </main>
+
+        <footer>
+            <p>Designed by A-U-T</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript dosyasını en sonda dahil edin -->
+    <script src="script.js"></script>
+</body>
+</html>

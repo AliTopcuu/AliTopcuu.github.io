@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUT - Projeler</title>
+    <link rel="stylesheet" href="web.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="gif-container">
+               
+            </div>
+           
+            
+        </header>
+        <aside>
+            
+            <nav>
+                <img src="images/i-VEED.gif" alt="logo GIF" class="gif-image">
+                <ul>
+                    <li><a href="index.html">Anasayfa</a></li>
+                    <li><a href="hakkımda.html">Hakkımda</a></li>
+                    <li><a href="projeler.html">Projeler</a></li>
+                </ul>
+            </nav>
+            <div class="social-links">
+                <a href="https://www.instagram.com/mojit0_0/profilecard/?igsh=NWZiODJob3F0bWVw" class="instagram-link" target="_blank">
+                    <img src="images/instalogo.png" alt="Instagram Logo" class="instagram-logo">
+                </a>
+                <a href="https://www.yemeksepeti.com/restaurant/g3da/cool-chickens" target="_blank"class="sponsor-link">
+                    <img src="images/sponsor.png" alt="Sponsor Logo" class="sponsor-logo">
+                </a>
+            </div>
+            
+        </aside>
+        <main class="project-page" style="background-image: url('images/deneme3.jpg');">
+            <h1 class="homepage-baslık" style="font-size: 60px;">Projeler</h1>
+            <p style="font-size: 40px;color: rgb(255, 255, 255,1); ">Projelerim alt tarafta yer almaktadır butonlar ile sıralayabilir resimlere tıklayarak daha detaylı bilgi alabilirsiniz.</p>
+            <!-- Filter and Sort Menu burada recent ve favori olarak 2 tane -->
+            <div class="filter-menu" >
+                <button onclick="sortProjects('recent')">En Yeniler</button>
+                <button onclick="sortProjects('favorites')">En Sevdiklerim</button>
+            </div>
+
+            
+            <div id="projects">
+                <!-- Project 1 -->
+                <div class="project" data-date="2024-10-01" data-likes="50" onclick="openModal('images/demir.png', 'Bu proje hayvan bakımı için hatırlatmalar sağlar. Kullanıcılar, evcil dostlarını daha rahat bir şekilde kontrol ettirebilir onlara veteriner randevusu oluşturabilir veya iptal edebilirler ayrıca bunun yanında onlara vetmarket aracılığı ile mama alabilir kendileri de içecek satın alabilirler...')">
+                    <img src="images/demir.png" alt="demir" style="width: 100%; height: auto; max-height: 400px; object-fit: cover; object-position: center bottom;">
+                    
+                    <h3>Hayvan Bakım Uygulaması</h3>
+                    <p>Hayvan bakımı için hatırlatmalar sağlayan bir uygulama.</p>
+                </div>
+                <!-- Project 2 -->
+                <div class="project" data-date="2024-05-20" data-likes="75" onclick="openModal('images/kütüphane.png', 'Kütüphane yaşantısını daha kolay hale getirmek için sanal bir versiyonu bu aşamada hala biraz geliştirme aşamasında olsada bir database aracılığı ile kitapların özelliklerini tutabilen içlerinde arama yaparak bunu liste haline getirerek daha hızlı bir erişim sağlama amacı olmaktadır ve bunun yanında kitaplara puan vererek onları daha rahat seçebileceğiz.')">
+                    <img src="images/kütüphane.png" alt="library" style="width: 100%; height: auto;">
+                    <h3>Sanal Kütüphane Projesi</h3>
+                    <p>Kütüphaneyi sanal ortamda kullanmamıza olanak sağlayan bir uygulamadır.</p>
+                </div>
+              
+            </div>
+        </main>
+        <footer>
+            <p>Designed by A-U-T</p>
+        </footer>
+    </div>
+
+   
+    <div id="imageModal" class="modal">
+        <img class="modal-content" id="modalImage">
+        <div id="modalCaption"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

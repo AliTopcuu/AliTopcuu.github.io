@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUT - Anasayfa</title>
+    <link rel="stylesheet" href="web.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+           
+        </header>
+
+        <aside>
+            <div class="gif-container">
+                <img src="images/i-VEED.gif" alt="Örnek GIF" class="gif-image">
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Anasayfa</a></li>
+                    <li><a href="hakkımda.html">Hakkımda</a></li>
+                    <li><a href="projeler.html">Projeler</a></li>
+                    <div id="clock" style="font-size: 24px; font-weight: bold;"></div>
+                </ul>
+
+            </nav>
+            <div class="social-links">
+                <a href="https://www.instagram.com/mojit0_0/profilecard/?igsh=NWZiODJob3F0bWVw" class="instagram-link" target="_blank">
+                    <img src="images/instalogo.png" alt="Instagram Logo" class="instagram-logo">
+                </a>
+                <a href="https://www.yemeksepeti.com/restaurant/g3da/cool-chickens" class="sponsor-link" target="_blank">
+                    <img src="images/sponsor.png" alt="Sponsor Logo" class="sponsor-logo">
+                </a>
+            </div>
+        </aside>
+
+        <main >
+            <h2 style="color: #5aa5a5;text-align: center;
+        font-weight: bold; border-bottom: 7px solid #F59E0B;">Anasayfa</h2>
+            <p>Web siteme hoşgeldiniz</p>
+            <p>Şu anda anasayfamda yer almaktasınız</p>
+           
+            <form id="contactForm" method="post">
+                <div id="error-message"></div><br>
+                <label for="fname">İsim</label>
+                <input type="text" id="fname" name="firstname" placeholder="Adınızı girin..">
+                <label for="email">E-posta</label>
+                <input type="text" id="email" name="email" placeholder="E-posta adresinizi girin..">
+                <label for="subject">Mesaj</label>
+                <textarea id="subject" name="subject" placeholder="Bir şeyler yazın.." style="height:200px" ></textarea>
+                <input type="submit" value="Gönder">
+            </form>
+            
+        </main>
+
+        <footer>
+            <p>Designed by A-U-T</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
